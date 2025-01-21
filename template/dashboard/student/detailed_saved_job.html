@@ -76,8 +76,8 @@
         <!-- Job Header -->
         <div class="job-header">
             <h1>{{ job.title }}</h1>
-            <p><strong>Company:</strong> {{ job.company_name }}</p>
-            <p><strong>Location:</strong> {{ job.place }}</p>
+            <p><strong>Company:</strong> {{ job.company.company_name }}</p>
+            <p><strong>Location:</strong> {{ job.location }}</p>
             <p><strong>Posted:</strong> {{ job.application_starting_date }}</p>
         </div>
 
@@ -95,7 +95,7 @@
                 </ul>
 
                 <h4>Additional Information</h4>
-                <p>{{ job.additional_info }}</p>
+                <p>{{ job.job_requirements | safe |linebreaksbr }}</p>
             </div>
         </div>
 
