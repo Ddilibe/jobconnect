@@ -78,6 +78,7 @@
             <h1>{{ job.title }}</h1>
             <p><strong>Company:</strong> {{ job.company.company_name }}</p>
             <p><strong>Location:</strong> {{ job.location }}</p>
+            <p><strong>Salary:</strong> {{ job.monthly_salary }}</p>
             <p><strong>Posted:</strong> {{ job.application_starting_date }}</p>
         </div>
 
@@ -85,7 +86,7 @@
         <div class="card job-details-card">
             <div class="card-body">
                 <h4>Job Description</h4>
-                <p>{{ job.description }}</p>
+                <p>{{ job.description | safe |linebreaksbr }}</p>
 
                 <!-- <h4>Requirements</h4> -->
                 <ul>
