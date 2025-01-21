@@ -74,12 +74,18 @@
 
                 <h4>Requirements</h4>
                 <ul>
-                    {{ job.requirement }}
+                    {{ job.job_requirements | safe |linebreaksbr }}
                 </ul>
 
                 <!-- <h4>Additional Information</h4> -->
                 <!-- <p>{{ job.additional_info }}</p> -->
             </div>
+        </div>
+        <div class="job-header">
+            <h1>{{ apply.full_name }}</h1>
+            <p><strong>Email:</strong> {{ apply.email }}</p>
+            <p><strong>Application Date:</strong> {{ apply.application_date }}</p>
+            <p><strong>Cover Letter:</strong> {{ apply.cover_letter | safe |linebreaksbr | truncatechars:50 }}</p>
         </div>
 
         <!-- Application Status -->

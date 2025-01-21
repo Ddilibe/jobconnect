@@ -114,12 +114,13 @@
                     <div class="container">
                         {% for applicant in applied_jobs %}
                         <div class="card">
-                            <h2>{{ applicant.full_name }}</h2>
+                            
                             <p class="email"><strong>Email:</strong> {{ applicant.email }}</p>
                             <p class="phone"><strong>Phone:</strong> {{ applicant.phone_number }}</p>
-                            <p><strong>Cover Letter:</strong> {{ applicant.cover_letter }}</p>
+                            <p><strong>Cover Letter:</strong> {{ applicant.cover_letter | truncatechars:50}}</p>
                             <p><strong>Job Status:</strong> {{ applicant.job_status }}</p>
-                            <a href="{% url 'appliedjob' applicant.pk %}"><button class="btn btn-info btn-sm">Detail</button></a>
+                            <a href="{% url 'appliedjob' applicant.pk %}"><button
+                                    class="btn btn-info btn-sm">Detail</button></a>
 
                         </div>
                         {% endfor %}

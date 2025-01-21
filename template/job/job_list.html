@@ -36,7 +36,7 @@
                     <div class="col-10">
                         <p class="pb-3 mb-0 lh-sm">
                             <strong class="d-block text-gray-dark">{{ iter.title }}</strong>
-                            {{iter.description}}
+                            {{iter.description | truncatechars:50 }}
                         </p>
                         <div class="row">
                             <div class="col-2">
